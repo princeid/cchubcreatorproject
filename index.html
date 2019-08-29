@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" href="styles.css">
+	<script type="text/javascript">
+		
+			let first, second, result;
+
+			function setvalues() {
+				first = Number(document.getElementById("first").value);
+				second = Number(document.getElementById("second").value);
+			}
+
+			function sum() {
+				setvalues();
+				result = first + second;
+				document.getElementById("result").value = result;
+			}
+
+			function subtract(){
+				setvalues();
+				result = first - second;
+				document.getElementById("result").value = result;
+			}
+
+			function multiply(){
+				setvalues();
+				result = first * second;
+				document.getElementById("result").value = result;
+			}
+
+			function divide(){
+				setvalues();
+				result = first / second;
+				document.getElementById("result").value = result;
+			}
+
+			function mod(){
+				setvalues();
+				result = first % second;
+				document.getElementById("result").value = result;
+			}
+
+			function remove(){
+				document.getElementById("first").value="";
+				document.getElementById("second").value="";
+				document.getElementById("result").value="";
+			}
+
+	</script>
+		
+	</head>
+	<body>
+		<div class="layout">
+			<input type="text" name="" id="result" class="result" disabled="disabled"/>
+			<input type="text" name="" id="first"/><br>
+			<input type="text" name="" id="second"/><br>
+			<input type="button" onclick="sum()"  value="+"/>
+			<input type="button" onclick="subtract()"  value="-"/>
+			<input type="button" onclick="multiply()"  value="*"/><br>
+			<input type="button" onclick="divide()"  value="/"/>
+			<input type="button" onclick="mod()"  value="%"/>
+			<input type="button" onclick="remove()"  value="c"/><br>
+		</div>
+		
+	</body>
+</html>
